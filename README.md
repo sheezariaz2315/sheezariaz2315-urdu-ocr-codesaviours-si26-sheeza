@@ -65,3 +65,47 @@ This project evaluated the performance of Tesseract OCR on an Urdu OCR dataset a
 ## Conclusion
 
 Tesseract fails on Urdu because Urdu is a cursive script with connected characters, varying writing styles, and complex ligatures. The baseline Tesseract OCR model struggles to accurately recognize these features, often producing missing words, incorrect characters, or empty outputs. This demonstrates the need for a better OCR model specifically trained for Urdu text.
+# Week 3 – Dataset Preparation for Urdu OCR
+
+## Objective
+Prepare the Urdu OCR dataset for fine-tuning the TrOCR model.
+
+## Work Completed
+
+- Collected and organized 200+ Urdu text images.
+- Updated `labels.csv` with image paths and corresponding Urdu text.
+- Split the dataset into:
+  - Training Set
+  - Validation Set
+  - Test Set
+- Created a custom `UrduOCRDataset` class using PyTorch.
+- Successfully loaded all images using the Hugging Face TrOCR processor.
+- Verified that the dataset loads correctly without errors.
+- Dataset is ready for TrOCR fine-tuning.
+
+## Dataset Statistics
+
+| Split | Images |
+|--------|--------|
+| Train | 160 |
+| Validation | 20 |
+| Test | 20 |
+| Total | 200 |
+
+## Technologies Used
+
+- Python
+- PyTorch
+- Hugging Face Transformers
+- TrOCR
+- Pandas
+- PIL
+- Google Colab
+
+## Status
+
+✅ Dataset prepared successfully.
+
+✅ Dataset loads correctly.
+
+✅ Ready for model training.
