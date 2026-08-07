@@ -109,3 +109,54 @@ Prepare the Urdu OCR dataset for fine-tuning the TrOCR model.
 ✅ Dataset loads correctly.
 
 ✅ Ready for model training.
+## Week 4 — TrOCR Model Training & Evaluation
+
+### Objective
+Fine-tune the pretrained TrOCR model on the Urdu OCR dataset, evaluate its performance on unseen test images, and save the trained model for further use.
+
+### Work Completed
+
+- Loaded the pretrained `microsoft/trocr-base-printed` TrOCR model.
+- Configured the model for Urdu OCR generation.
+- Used GPU acceleration through Google Colab.
+- Prepared training and testing DataLoaders.
+- Configured the AdamW optimizer with a learning rate of `5e-5`.
+- Fine-tuned the TrOCR model on the Urdu OCR training dataset.
+- Monitored training loss across multiple epochs.
+- Tested the trained model on unseen test images.
+- Compared predicted text with the ground-truth text.
+- Evaluated the model using exact text matching accuracy.
+- Saved the trained model and processor to Google Drive.
+
+### Training Results
+
+The training loss decreased during training, showing that the model was learning from the Urdu OCR training data.
+
+**Training Loss:** 5.7914 → 3.0700
+
+### Model Evaluation
+
+The trained model was evaluated on the test dataset using exact text matching between the predicted and ground-truth text.
+
+**Model Accuracy:** 0.00%
+
+The current accuracy indicates that the model did not produce an exact match for the evaluated test samples. The prediction results will be further analyzed and improved in the next stage of the project.
+
+### Week 4 Deliverables
+
+- TrOCR training notebook
+- Training loop and loss monitoring
+- Test-set evaluation code
+- Model predictions and ground-truth comparison
+- Trained model saved to Google Drive
+- Training output showing decreasing loss
+
+### Technologies Used
+
+- Python
+- Google Colab
+- PyTorch
+- Hugging Face Transformers
+- TrOCR
+- AdamW
+- Google Drive
