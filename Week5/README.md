@@ -1,6 +1,3 @@
-Bilkul, ye **poora ready-to-copy README** hai. Isay `Week5/README.md` mein **as it is** paste kar do:
-
-````markdown
 # Urdu OCR — Code Saviours SI-26
 
 A fine-tuned TrOCR-based Optical Character Recognition (OCR) system for extracting Urdu text from images.
@@ -49,8 +46,6 @@ The application was tested using a temporary Cloudflare Tunnel through Google Co
 ```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
 cd YOUR_REPOSITORY_NAME
-````
-
 ### Step 2 — Install Dependencies
 
 ```bash
