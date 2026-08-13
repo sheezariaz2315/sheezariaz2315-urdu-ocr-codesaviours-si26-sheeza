@@ -1,0 +1,8 @@
+
+streamlit
+torch
+transformers==4.55.4
+tokenizers==0.21.4
+sentencepiece
+accelerate
+Pillow
