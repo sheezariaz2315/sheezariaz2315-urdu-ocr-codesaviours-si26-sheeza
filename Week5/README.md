@@ -85,9 +85,8 @@ The dataset was organized using image-label pairs, where each image was associat
 
 The model was fine-tuned and evaluated during Week 4.
 
-**My model accuracy is X%.**
+**My model accuracy is 0%.**
 
-**Training loss went from X to X.**
 
 The trained model was integrated into a Streamlit web application and tested with Urdu images.
 
