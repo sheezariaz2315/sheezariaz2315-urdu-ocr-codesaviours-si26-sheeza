@@ -46,6 +46,8 @@ The application was tested using a temporary Cloudflare Tunnel through Google Co
 ```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
 cd YOUR_REPOSITORY_NAME
+
+````
 ### Step 2 — Install Dependencies
 
 ```bash
