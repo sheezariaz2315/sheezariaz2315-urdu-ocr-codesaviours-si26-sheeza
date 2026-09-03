@@ -1,0 +1,60 @@
+
+Week 2 handout specifies grayscale → resize → denoise → binarise and then Tesseract testing on 5 images, followed by gap analysis. :contentReference[oaicite:6]{index=6} :contentReference[oaicite:7]{index=7}
+
+---
+
+# 📁 WEEK 3 — `Week3/README.md`
+
+**Week3 folder → Add file → Create new file → `README.md`**
+
+Ye paste karo:
+
+```markdown
+# Week 3 — Urdu OCR Dataset Preparation
+
+Building a PyTorch Dataset class for the Urdu OCR model.
+
+## What This Week Was About
+
+Week 3 focused on connecting Urdu images with their correct text labels and preparing the dataset for model training.
+
+## Why This Matters
+
+A machine learning model needs image-text pairs so that it can learn how visual Urdu text corresponds to the correct written text. A proper Dataset class makes it easier to load and process these image-text pairs during training.
+
+## How It Works
+
+A custom PyTorch Dataset class loads each image and its corresponding text from the labels file. The image is processed using the TrOCR processor, while the text label is converted into token IDs that the model can understand. The complete dataset is then divided into training and testing sets.
+
+## What I Did
+
+- Loaded the Urdu image dataset.
+- Loaded the labels file.
+- Created a custom `UrduOCRDataset` class.
+- Loaded the TrOCR processor.
+- Converted images into model-compatible pixel values.
+- Converted text labels into token IDs.
+- Tested the dataset.
+- Created an 80/20 train-test split.
+
+## Results
+
+The dataset was successfully connected to the TrOCR processor and prepared for model training.
+
+### Dataset Split
+
+- 80% — Training data
+- 20% — Testing data
+
+## Model
+
+The TrOCR processor used in this stage was:
+
+`microsoft/trocr-base-printed`
+
+## How to Run
+
+Install the required libraries:
+
+```bash
+pip install torch transformers pillow pandas
