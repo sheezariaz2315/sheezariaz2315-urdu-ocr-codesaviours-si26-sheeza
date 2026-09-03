@@ -1,0 +1,67 @@
+
+Week 3 handout specifically uses `UrduOCRDataset`, TrOCR processor, and an **80% train / 20% test split**. :contentReference[oaicite:8]{index=8}
+
+---
+
+# 📁 WEEK 4 — `Week4/README.md`
+
+**Week4 folder → Add file → Create new file → `README.md`**
+
+Ye paste karo:
+
+```markdown
+# Week 4 — Urdu OCR Model Training
+
+Fine-tuning a pretrained TrOCR model on the Urdu OCR dataset.
+
+## What This Week Was About
+
+Week 4 focused on training the Urdu OCR model, evaluating its performance, and saving the trained model for deployment.
+
+## Why This Matters
+
+A pretrained OCR model can be adapted to a specific language and dataset through fine-tuning. In this project, TrOCR was fine-tuned on Urdu image-text data so that it could learn to recognize Urdu text more effectively.
+
+## How It Works
+
+The project uses Microsoft's pretrained TrOCR model. The model reads an input image and generates the corresponding text. The model was trained on the prepared Urdu dataset using batches and an optimizer. After training, the model was tested on unseen test images and its accuracy was calculated.
+
+## What I Did
+
+- Loaded the pretrained TrOCR model.
+- Checked for GPU availability.
+- Created training and testing DataLoaders.
+- Configured the AdamW optimizer.
+- Trained the model for 3 epochs.
+- Evaluated the model on test images.
+- Calculated final accuracy.
+- Saved the trained model and processor to Google Drive.
+
+## Results
+
+### Final Accuracy
+
+**[PASTE YOUR ACTUAL WEEK 4 ACCURACY HERE]%**
+
+### Correct Predictions
+
+**[PASTE YOUR ACTUAL CORRECT / TOTAL HERE]**
+
+### Incorrect Examples
+
+1. [PASTE EXAMPLE]
+2. [PASTE EXAMPLE]
+3. [PASTE EXAMPLE]
+
+## Model
+
+Pretrained model:
+
+`microsoft/trocr-base-printed`
+
+## How to Run
+
+Install the required libraries:
+
+```bash
+pip install transformers torch pillow pandas
