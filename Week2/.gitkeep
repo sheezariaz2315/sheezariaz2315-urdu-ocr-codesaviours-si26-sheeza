@@ -1,1 +1,44 @@
+# Week 2 — Urdu OCR Preprocessing
 
+Preprocessing Urdu text images and testing Tesseract OCR as a baseline.
+
+## What This Week Was About
+
+Week 2 focused on preparing the Urdu images for machine learning and testing how well a traditional OCR system handles Urdu text.
+
+## Why This Matters
+
+Images collected from different sources can have different sizes, colours, noise, and quality. Preprocessing makes the images more consistent and easier for an OCR model to process. Testing Tesseract also helps show the limitations of traditional OCR for Urdu.
+
+## How It Works
+
+The images were converted to grayscale, resized to 512×128 pixels, denoised, and binarised. The processed images were saved in a separate processed-data folder. Tesseract OCR was then tested on five processed Urdu images using the Urdu language model.
+
+## What I Did
+
+- Installed OpenCV and Pillow.
+- Created an image preprocessing pipeline.
+- Converted images to grayscale.
+- Resized images to a standard size.
+- Removed image noise.
+- Applied binary thresholding.
+- Tested Tesseract OCR on Urdu images.
+- Compared actual Urdu text with Tesseract output.
+- Prepared a gap analysis.
+
+## Results
+
+The preprocessing pipeline successfully prepared the images for the next stage.
+
+Tesseract was tested on five Urdu images to identify errors such as incorrect characters, missing words, or unclear output.
+
+## Why We Need a Better Model
+
+Tesseract struggles with Urdu text, which motivated the use of a transformer-based OCR model in later weeks.
+
+## How to Run
+
+Install the required libraries:
+
+```bash
+pip install opencv-python-headless pillow pytesseract
