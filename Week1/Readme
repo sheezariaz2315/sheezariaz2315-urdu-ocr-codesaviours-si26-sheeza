@@ -1,0 +1,31 @@
+# Week 1 — Urdu OCR Project
+
+Collecting and preparing Urdu text images for an Optical Character Recognition project.
+
+## Why This Matters
+
+Optical Character Recognition (OCR) converts text inside images into machine-readable text. Urdu OCR is more challenging than English OCR because Urdu uses a connected writing system and different letter shapes can change depending on their position. A reliable Urdu OCR system can help digitize Urdu books, newspapers, documents, and other printed material.
+
+## Live Demo
+
+The final Urdu OCR application is available here:
+
+[Urdu OCR Hugging Face Space](PASTE_YOUR_HUGGINGFACE_SPACE_LINK_HERE)
+
+## How It Works
+
+In Week 1, the project focused on understanding OCR and collecting Urdu text images. Images were collected from different sources and organized into categories such as newspapers, books, signboards, synthetic images, and other sources. Ground-truth text labels were also prepared for the images. This dataset became the foundation for the preprocessing and model-training stages.
+
+## Results
+
+- Target dataset: 100+ Urdu text images
+- Images organized into categories
+- Ground-truth labels prepared
+- Dataset prepared for preprocessing in Week 2
+
+## How to Run Locally
+
+Install the libraries used for synthetic Urdu image generation:
+
+```bash
+pip install Pillow arabic-reshaper python-bidi
