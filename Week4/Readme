@@ -1,63 +1,69 @@
-
-Week 3 handout specifically uses `UrduOCRDataset`, TrOCR processor, and an **80% train / 20% test split**. :contentReference[oaicite:8]{index=8}
-
----
-
-# 📁 WEEK 4 — `Week4/README.md`
-
-**Week4 folder → Add file → Create new file → `README.md`**
-
-Ye paste karo:
-
-```markdown
 # Week 4 — Urdu OCR Model Training
 
 Fine-tuning a pretrained TrOCR model on the Urdu OCR dataset.
 
-## What This Week Was About
-
-Week 4 focused on training the Urdu OCR model, evaluating its performance, and saving the trained model for deployment.
-
 ## Why This Matters
 
-A pretrained OCR model can be adapted to a specific language and dataset through fine-tuning. In this project, TrOCR was fine-tuned on Urdu image-text data so that it could learn to recognize Urdu text more effectively.
+Traditional OCR systems can struggle with Urdu text. Fine-tuning a pretrained OCR model allows the model to learn from Urdu image-text examples and adapt to the Urdu OCR task.
+
+## Live Demo
+
+[Urdu OCR Hugging Face Space](PASTE_YOUR_HUGGINGFACE_SPACE_LINK_HERE)
 
 ## How It Works
 
-The project uses Microsoft's pretrained TrOCR model. The model reads an input image and generates the corresponding text. The model was trained on the prepared Urdu dataset using batches and an optimizer. After training, the model was tested on unseen test images and its accuracy was calculated.
+The project uses Microsoft's pretrained TrOCR model. TrOCR combines a vision encoder, which reads the input image, with a text decoder, which generates the corresponding text.
+
+The pretrained model was fine-tuned on the Urdu image-text dataset prepared during the previous weeks. The training data was loaded in batches and the AdamW optimizer was used to update the model during training.
+
+After training, the model was evaluated on test images that it had not seen during training.
 
 ## What I Did
 
-- Loaded the pretrained TrOCR model.
-- Checked for GPU availability.
+- Loaded the pretrained `microsoft/trocr-base-printed` model.
+- Checked GPU availability.
 - Created training and testing DataLoaders.
 - Configured the AdamW optimizer.
 - Trained the model for 3 epochs.
 - Evaluated the model on test images.
-- Calculated final accuracy.
+- Calculated the final accuracy.
 - Saved the trained model and processor to Google Drive.
 
 ## Results
 
 ### Final Accuracy
 
-**[PASTE YOUR ACTUAL WEEK 4 ACCURACY HERE]%**
+**0%**
 
-### Correct Predictions
+The model did not produce any exact matches between its predictions and the actual text in the test set.
 
-**[PASTE YOUR ACTUAL CORRECT / TOTAL HERE]**
+### Prediction Examples
 
-### Incorrect Examples
+The specific incorrect prediction examples were not recorded.
 
-1. [PASTE EXAMPLE]
-2. [PASTE EXAMPLE]
-3. [PASTE EXAMPLE]
+### Analysis
+
+The 0% exact-match accuracy indicates that the model was not yet able to produce the complete expected Urdu text exactly on the test images.
+
+Possible improvements for future work include collecting more diverse Urdu training data, improving image quality and preprocessing, increasing the amount of training data, and further tuning the model.
 
 ## Model
 
 Pretrained model:
 
 `microsoft/trocr-base-printed`
+
+## Training
+
+- Number of epochs: 3
+- Batch size: 4
+- Optimizer: AdamW
+- Learning rate: 5e-5
+- Training device: GPU
+
+## Model Saving
+
+The trained model and processor were saved to Google Drive so they could be reused for deployment without retraining from scratch.
 
 ## How to Run
 
